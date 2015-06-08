@@ -3,15 +3,17 @@ var fs = require('fs');
 var Stream = require("stream");
 
 // Recursively read directories and return an array of directories
+// Ignore directories started with _
 function dirsList(root, dirs, prefix) {
     prefix = prefix || '';
     dirs = dirs || [];
 
     var dir = path.join(root, prefix);
 
-    if (fs.statSync(dir).isDirectory()) {
+    if (fs.statSync(dir).isDirectory() &&
+        path.basename(prefix).substr(0, 1) !== '_') {
         dirs.push(prefix);
-        fs.readdirSync(dir).forEach(function(name) {
+        fs.readdirSync(dir).forEach(function (name) {
             dirsList(root, dirs, path.join(prefix, name))
         });
     }
