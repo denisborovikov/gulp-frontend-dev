@@ -17,12 +17,12 @@ Skip this step if you already did it before.
 1. Go to the project root directory.
 2. Make symlink to `gulp-frontend-dev/node_modules` directory: `ln -s /your_path_to/gulp-frontend-dev/node_modules .`
 3. Make symlink to `gulp-frontend-dev/gulp` directory: `ln -s /your_path_to/gulp-frontend-dev/gulp .`
-4. If you start a new project, copy `gulp-config.js`, `gulp-config-local-example.js`, `gulpfile.js` and `package.json` files from the repo (see install section) to the project root directory. If it's existing project, this files should be in place.
+4. If you start a new project, copy `gulp-config.js`, `gulpfile.js` and `package.json` files from the repo (see install section) to the project root directory. If it's existing project, this files should be in place.
 
 
 ### Config
 
-1. Copy `gulp-config-local-example.js` and rename it to `gulp-config-local.js`. Make all of your local specific changes in this file.
+1. Copy `gulp/utils/gulp-config-local-example.js` to the root directory and rename it to `gulp-config-local.js`. Make all of your local specific changes in this file.
 2. If you start a new project, add `node_modules`, `gulp`, and `gulp-config-local.js` to `.gitignore`.
 
 
