@@ -17,7 +17,7 @@ Skip this step if you already did it before.
 1. Go to the project root directory.
 2. Make symlink to `gulp-frontend-dev/node_modules` directory: `ln -s /your_path_to/gulp-frontend-dev/node_modules .`
 3. Make symlink to `gulp-frontend-dev/gulp` directory: `ln -s /your_path_to/gulp-frontend-dev/gulp .`
-4. If you start a new project, copy `gulp-config.js`, `gulp-config-local-example.js`, `gulpfile.js` files from the repo (see install section) to the project root directory. If it's existing project, this files should be in place.
+4. If you start a new project, copy `gulp-config.js`, `gulp-config-local-example.js`, `gulpfile.js` and `package.json` files from the repo (see install section) to the project root directory. If it's existing project, this files should be in place.
 
 
 ### Config
@@ -35,9 +35,10 @@ Make this step if you get an error running gulp tasks.
 1. Go to the `gulp-frontend-dev` directory.
 2. Update the repo: `git pull`.
 3. If `gulpfile.js` was changed, copy and replace it in your project(s) root directory(s).
-4. If `gulp-config.js` was changed, merge it with the same file in your project(s) root directory(s).
-5. 4. If `gulp-config-local-example.js` was changed, copy it to your project(s) root directory(s), rename to `gulp-config-local.js` and merge with the same file.
-6. Update npm dependencies: `npm install`.
+4. If `package.json` was changed, copy and replace it in your project(s) root directory(s).
+5. If `gulp-config.js` was changed, merge it with the same file in your project(s) root directory(s).
+6. 4. If `gulp-config-local-example.js` was changed, copy it to your project(s) root directory(s), rename to `gulp-config-local.js` and merge with the same file.
+7. Update npm dependencies: `npm install`.
 
 
 ## Gulp task
