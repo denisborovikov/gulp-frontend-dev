@@ -1,5 +1,5 @@
 // Rename this file to `gulp-config-local.js`.
-// Options here overrides `gulp-config.js`.
+// Options here override `gulp-config.js`.
 var options = {};
 
 // Browser sync options (http://www.browsersync.io/docs/options/).

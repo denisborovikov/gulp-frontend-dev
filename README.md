@@ -22,7 +22,7 @@ Skip this step if you already did it before.
 
 ### Config
 
-1. Copy `gulp/utils/gulp-config-local-example.js` to the root directory and rename it to `gulp-config-local.js`. Make all of your local specific changes in this file.
+1. Copy `gulp/utils/gulp-config-local-example.js` to the project root directory and rename it to `gulp-config-local.js`. Make all of your local specific changes in this file.
 2. If you start a new project, add `node_modules`, `gulp`, and `gulp-config-local.js` to `.gitignore`.
 
 
