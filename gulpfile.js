@@ -7,6 +7,6 @@ var options = extend(true, require('./gulp-config.js'), require('./gulp-config-l
 
 // Add tasks here.
 // See task module example in the `task` directory.
-fs.readdirSync('./tasks/').forEach(function(file){
-    require('./tasks/' + file)(gulp, options, $);
+fs.readdirSync('./gulp/tasks/').forEach(function(file){
+    require('./gulp/tasks/' + file)(gulp, options, $);
 });
