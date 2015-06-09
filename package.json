@@ -12,7 +12,6 @@
     "extend": "^2.0.0",
     "gulp": "^3.8.11",
     "gulp-css-flipper": "^1.0.2",
-    "gulp-debug": "^2.0.1",
     "gulp-file-include": "^0.9.0",
     "gulp-html-i18n": "^0.2.3",
     "gulp-if": "^1.2.5",
