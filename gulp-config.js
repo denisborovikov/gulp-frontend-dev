@@ -6,6 +6,9 @@ options.argv = require('yargs').argv;
 // Root directory for assets.
 options.basedir = 'project/static/';
 
+// Uncomment if project is a static site generator
+// options.staticGenerator = true;
+
 // Browser sync options (http://www.browsersync.io/docs/options/).
 // browserSync.proxy    - Proxy an EXISTING vhost. Used for `gulp watch`.
 options.browserSync = {
