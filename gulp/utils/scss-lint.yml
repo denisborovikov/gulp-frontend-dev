@@ -136,6 +136,7 @@ linters:
       "-ms-overflow-y",
       "clip",
       "zoom",
+      "flex",
       "flex-align",
       "flex-direction",
       "flex-order",
