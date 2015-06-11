@@ -147,4 +147,13 @@ options.files.img.push('!**/'+ options.sprites.prefix + '**/**/');
 // directory. They used in svg sprites (svg task).
 options.files.img.push('!**/sprite-*.svg');
 
+// Hack to copy object
+options.linter = JSON.parse(JSON.stringify(options.files.scss));
+
+// Exclude directories from scss linter.
+// Don't lint directories with _ at the beginning of the name, tools, settings.
+options.linter.push('!**/_**/**/');
+options.linter.push('!**/tools/**/');
+options.linter.push('!**/settings/**/');
+
 module.exports = options;

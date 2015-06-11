@@ -10,7 +10,7 @@ module.exports = function(gulp, options, $) {
         gulp.watch(options.files.sprites, ['sprites']);
         gulp.watch(options.files.img, ['images']);
         gulp.watch(options.files.js, reload);
-        console.log(options.staticGenerator)
+
         if (options.staticGenerator) {
             gulp.watch(options.files.html, ['html']);
         } else {
