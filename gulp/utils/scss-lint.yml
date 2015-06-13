@@ -17,7 +17,7 @@ linters:
     convention: zero # or `none`
 
   ColorKeyword:
-    enabled: true
+    enabled: false
 
   ColorVariable:
     enabled: false
