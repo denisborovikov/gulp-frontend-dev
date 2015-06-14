@@ -3,7 +3,7 @@ var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 //var gulpCallback = require('../utils/utils').gulpCallback;
 //var lwip         = require('lwip');
-var File         = require('vinyl');
+//var File         = require('vinyl');
 
 module.exports = function(gulp, options, $) {
     gulp.task('images', function () {
