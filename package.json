@@ -23,7 +23,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.3.3",
     "gulp-sass-bulk-import": "git://github.com/denisborovikov/gulp-sass-bulk-import",
-    "gulp-scss-lint": "^0.1.11",
+    "gulp-scss-lint": "^0.2.0",
     "gulp-split-locales": "git://github.com/denisborovikov/gulp-split-locales.git",
     "gulp-svgmin": "^1.1.1",
     "gulp-svgstore": "^5.0.0",
