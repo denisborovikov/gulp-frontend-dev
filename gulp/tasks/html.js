@@ -4,6 +4,7 @@ var reload = browserSync.reload;
 module.exports = function (gulp, options, $) {
     gulp.task('html', function () {
         return gulp.src(options.paths.html + '*.html')
+            .pipe($.plumber())
             .pipe($.fileInclude({
                 prefix  : '@@',
                 basepath: '@file'

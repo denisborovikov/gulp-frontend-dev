@@ -25,6 +25,7 @@ module.exports = function(gulp, options, $) {
            if (fs.statSync(options.paths.scss + file).isDirectory() || path.extname(file) !== '.scss' || (name.substr(0, 1) === '_' && !options.argv.only)) return false;
 
            gulp.src(options.paths.scss + name + '.scss')
+               .pipe($.plumber())
                .pipe($.sassBulkImport())
                .pipe($.sass({precision: 10, onError: console.error.bind(console, 'Sass error:')}))
                .pipe($.postcss([
