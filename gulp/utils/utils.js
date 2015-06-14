@@ -21,13 +21,13 @@ function dirsList(root, dirs, prefix) {
     return dirs;
 }
 
-// Run pipe callback, get stream as parameter
-// Return modified stream or undefined.
+// Run pipe callback, get chunk as parameter
+// Return modified chunk or undefined.
 function gulpCallback(obj) {
     var stream = new Stream.Transform({objectMode: true});
 
     stream._transform = function(file, unused, callback) {
-        var result = obj(file);
+        var result = obj(file, stream);
         file = result === undefined ? file : result;
         callback(null, file);
     };
