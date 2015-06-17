@@ -27,7 +27,7 @@ module.exports = function(gulp, options, $) {
            gulp.src(options.paths.scss + name + '.scss')
                .pipe($.plumber())
                .pipe($.sassBulkImport())
-               .pipe($.sass({precision: 10, onError: console.error.bind(console, 'Sass error:')}))
+               .pipe($.sass({precision: 10}))
                .pipe($.postcss([
                                    autoprefixer(options.postcss.autoprefixer),
                                    mqpacker,
