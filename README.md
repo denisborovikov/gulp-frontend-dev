@@ -66,6 +66,14 @@ TODO: Add tasks description.
 
 `gulp lint`
 
+### All tasks at once (optimize images, generate svg and png-sprites, compile css)
+
+`gulp all`
+
+### Build html (aka static site generator)
+
+`gulp html`
+
 ### Watch for changes
 
 `gulp watch`
