@@ -30,7 +30,7 @@ module.exports = function(gulp, options, $) {
                .pipe($.sass({precision: 10}))
                .pipe($.postcss([
                                    autoprefixer(options.postcss.autoprefixer),
-                                   mqpacker,
+                                   mqpacker(options.postcss.mqpacker),
                                    assets(options.postcss.assets)
                                ]))
                .pipe($.if(~options.localize.indexOf(name + '.scss'), $.splitLocales()))

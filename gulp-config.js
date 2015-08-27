@@ -76,9 +76,11 @@ options.files = {
 
 // PostCSS processors and options.
 // Autoprefixer (https://github.com/postcss/autoprefixer).
-// CSS MQPacker (https://github.com/hail2u/node-css-mqpacker).
-// Assets (https://github.com/borodean/postcss-assets).
 //
+// CSS MQPacker (https://github.com/hail2u/node-css-mqpacker).
+// sort                 - set true to sort queries automatically
+//
+// Assets (https://github.com/borodean/postcss-assets).
 // assets.basePath      - Processor would treat this directory as / for all
 //                        URLs and load paths would be relative to it.
 // assets.loadPaths     - Processor will search for files in this specific
@@ -94,9 +96,12 @@ options.postcss = {
         basePath   : options.basedir,
         loadPaths  : [options.dirs.img],
         baseUrl    : '/static/',
-        cachebuster: function(path) {
+        cachebuster: function (path) {
             return fs.statSync(path).size.toString(16);
         }
+    },
+    mqpacker    : {
+        sort: false
     }
 };
 
