@@ -139,6 +139,7 @@ linters:
       - flex-direction
       - flex-order
       - flex-pack
+      - flex-wrap
       - justify-content
       - column-count
       - column-fill
