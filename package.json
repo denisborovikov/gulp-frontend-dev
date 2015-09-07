@@ -4,10 +4,10 @@
   "author": "Denis Borovikov",
   "private": true,
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
-    "browser-sync": "^2.8.2",
+    "autoprefixer": "^6.0.1",
+    "browser-sync": "^2.9.1",
     "chalk": "^1.1.1",
-    "css-mqpacker": "^3.1.0",
+    "css-mqpacker": "^4.0.0",
     "css-sprite": "^0.9.9",
     "extend": "^2.0.1",
     "gulp": "^3.9.0",
@@ -28,8 +28,8 @@
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.4",
     "merge-stream": "^0.1.8",
-    "postcss-assets": "^2.1.3",
+    "postcss-assets": "^3.0.2",
     "run-sequence": "^1.1.2",
-    "yargs": "^3.21.0"
+    "yargs": "^3.24.0"
   }
 }

@@ -10,7 +10,7 @@ var reload       = browserSync.reload;
 var gulpCallback = require('../utils/utils').gulpCallback;
 
 // PostCSS processors
-var autoprefixer = require('autoprefixer-core');
+var autoprefixer = require('autoprefixer');
 var mqpacker     = require('css-mqpacker');
 var assets       = require('postcss-assets');
 
