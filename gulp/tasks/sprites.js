@@ -14,7 +14,7 @@
 
 var fs          = require('fs');
 var path        = require('path');
-var sprite      = require('css-sprite').stream;
+var sprity      = require('sprity');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var dirsList    = require('../utils/utils').dirsList;
@@ -33,18 +33,18 @@ module.exports = function(gulp, options, $) {
                 var retina = parsedSpriteName.retina;
                 var currentDir = spriteDirs[0];
 
-                gulp.src(filesList)
-                    .pipe(sprite({
-                              prefix       : prefixedName,
-                              name         : prefixedName,
-                              style        : '_' + prefixedName + '.scss',
-                              cssPath      : options.sprites.url + currentDir,
-                              orientation  : options.sprites.orientation,
-                              margin       : options.sprites.margin,
-                              template     : options.sprites.template,
-                              interpolation: options.sprites.interpolation,
-                              retina       : retina
-                          }))
+                sprity.src({
+                        src          : filesList,
+                        prefix       : prefixedName,
+                        name         : prefixedName,
+                        style        : '_' + prefixedName + '.scss',
+                        cssPath      : options.sprites.url + currentDir,
+                        orientation  : options.sprites.orientation,
+                        margin       : options.sprites.margin,
+                        template     : options.sprites.template,
+                        interpolation: options.sprites.interpolation,
+                        retina       : retina
+                    })
                     .pipe($.imagemin())
                     .pipe($.if('*.png', gulp.dest(options.paths.img + path.dirname(currentDir)), gulp.dest(options.sprites.src + path.dirname(currentDir))))
                     .pipe(reload({stream: true}));
@@ -117,7 +117,7 @@ module.exports = function(gulp, options, $) {
     // Files with the same name after the 1st one are ignored.
     function getFilesForSprite(dirs) {
         var uniqueFiles = {},
-            filesList = [];
+          filesList = [];
 
         dirs.forEach(function(dir) {
             var fullPath = path.join(options.sprites.src, dir);
